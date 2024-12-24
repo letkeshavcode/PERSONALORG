@@ -1,0 +1,34 @@
+<template>
+    <template if:false={endGame} >
+        <lightning-card style="align-items: center; width:50%;">
+            <lightning-input label="User 1" onchange={handleUser1Input}></lightning-input>
+            <lightning-input label="User 2" onchange={handleUser2Input}></lightning-input>
+            <lightning-button type="submit" label="Start Game" style="align-items: center;" onclick={handleStartGame}></lightning-button>
+        </lightning-card>
+    </template>
+    
+    <template if:true={startGame}>
+        <div class="container slds-box">
+            <!-- <p>main content will come here</p> -->
+            <div class="slds-grid column">
+                <div data-id="00" class="slds-col sq slds-size_1-of-3 slds-box" onclick={handleClick}>1</div>
+                <div data-id="01" class="slds-col sq slds-size_1-of-3 slds-box" onclick={handleClick}>2</div>
+                <div data-id="02" class="slds-col sq slds-size_1-of-3 slds-box" onclick={handleClick}>3</div>
+            </div>
+            <div class="slds-grid  column">
+                <div data-id="10" class="slds-col sq slds-size_1-of-3 slds-box" onclick={handleClick}>4</div>
+                <div data-id="11" class="slds-col sq slds-size_1-of-3 slds-box" onclick={handleClick}>5</div>
+                <div data-id="12" class="slds-col sq slds-size_1-of-3 slds-box" onclick={handleClick}>6</div>
+            </div>
+            <div class="slds-grid  column">
+                <div data-id="20" class="slds-col sq slds-size_1-of-3 slds-box" onclick={handleClick}>7</div>
+                <div data-id="21" class="slds-col sq slds-size_1-of-3 slds-box" onclick={handleClick}>8</div>
+                <div data-id="22" class="slds-col sq slds-size_1-of-3 slds-box" onclick={handleClick}>9</div>
+            </div>
+        </div>
+    </template>
+    <template if:true={endGame} >
+        <h1><b> Winner is {winner}</b></h1>
+        <lightning-button label="Restart" type="neutral" onclick={handleRestart}></lightning-button>
+    </template>
+</template>

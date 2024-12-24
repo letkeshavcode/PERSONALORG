@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- State --></label>
+    <name>State__c</name>
+    <picklistValues>
+        <masterLabel>Boston</masterLabel>
+        <translation><!-- Boston --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Canberra</masterLabel>
+        <translation><!-- Canberra --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Florida</masterLabel>
+        <translation><!-- Florida --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>London</masterLabel>
+        <translation><!-- London --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Massachusetts</masterLabel>
+        <translation><!-- Massachusetts --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

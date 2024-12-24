@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Technology --></label>
+    <name>Technology__c</name>
+    <picklistValues>
+        <masterLabel>.net</masterLabel>
+        <translation><!-- .net --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Appian</masterLabel>
+        <translation><!-- Appian --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ML</masterLabel>
+        <translation><!-- ML --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Python</masterLabel>
+        <translation><!-- Python --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Salesforce</masterLabel>
+        <translation><!-- Salesforce --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

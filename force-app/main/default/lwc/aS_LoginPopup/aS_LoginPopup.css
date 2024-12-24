@@ -1,0 +1,19 @@
+.container{
+
+    max-width: 30vw;
+    max-height: 30vh;
+    height: 100%;
+    width:100%;
+    align-items:center;
+    text-align: center;
+}
+.header{
+    font-style: normal;
+    font-weight:600 ;
+    font-size: large;
+    display: flex;
+}
+
+.footer{
+    align-items: right;
+}

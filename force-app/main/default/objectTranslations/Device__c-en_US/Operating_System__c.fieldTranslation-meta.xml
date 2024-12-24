@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Processor --></label>
+    <name>Operating_System__c</name>
+    <picklistValues>
+        <masterLabel>Celeron</masterLabel>
+        <translation><!-- Celeron --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>I3 10th gen</masterLabel>
+        <translation><!-- I3 10th gen --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>I3 11th gen</masterLabel>
+        <translation><!-- I3 11th gen --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Ryzen</masterLabel>
+        <translation><!-- Ryzen --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>i5</masterLabel>
+        <translation><!-- i5 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>i7</masterLabel>
+        <translation><!-- i7 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>i9</masterLabel>
+        <translation><!-- i9 --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

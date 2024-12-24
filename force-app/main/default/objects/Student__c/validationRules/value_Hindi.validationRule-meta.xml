@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>value_Hindi</fullName>
+    <active>true</active>
+    <errorConditionFormula>OR( Hindi__c &gt;100,Hindi__c &lt;0)</errorConditionFormula>
+    <errorDisplayField>Hindi__c</errorDisplayField>
+    <errorMessage>Enter valid marks</errorMessage>
+</ValidationRule>

@@ -1,0 +1,58 @@
+<template>
+  <!-- <template for:each={data} for:item="d">
+      <div key={d.Id}>  {d.name} </div>
+      
+  </template>
+  -->
+  <div style="align-items:center;">
+      <lightning-button label="ShowData" onclick={handleShowData}>
+          Show Data
+      </lightning-button>
+  </div>
+<template if:true={showTable}>
+  <lightning-datatable
+  key-field="id"
+  data={data}
+  columns={columns}
+  hide-checkbox-column="true">
+  </lightning-datatable>
+</template>
+  <div class="createNewfile">
+    <lightning-input label="Name" onchange={handleNameChange}></lightning-input>
+    <lightning-input label="Type" onchange={handleTypeChange}></lightning-input>
+    <lightning-button label="Create Document" onclick={handleCreate}></lightning-button>
+  </div>
+
+  <div class="fileUpload" style="margin-top: 5%;">
+    <lightning-card title="Upload Document" icon-name="custom:custom14">
+      <lightning-input type="file" 
+      accept=".xlsx, .xls, .csv, .png, .doc, .docx, .pdf,.jpeg"
+      label="Attachment" onchange={openfileUpload}></lightning-input>
+      <lightning-button variant="brand" label="submit" title="Submit" onclick={handleClick} class="slds-m-left_x-small"></lightning-button>
+    </lightning-card>
+  </div>
+
+<!-- <lightning-layout horizontal-align="space" >
+  <lightning-layout-item flexibility="auto" style="margin-top:4px">
+    <lightning-button label="First"  icon-position="left" onclick={FirstHandler}>
+    </lightning-button>
+  </lightning-layout-item>
+<lightning-layout-item flexibility="auto"  style="margin-top:4px; margin-left:-80px" >
+  <lightning-button label="Previous" icon-name="utility:chevronleft" onclick={previousHandler}>
+  </lightning-button>
+</lightning-layout-item>
+
+<lightning-layout-item flexibility="auto"  style="margin-top:4px">
+  Page {page} of {totalPage}
+</lightning-layout-item>
+<lightning-layout-item flexibility="auto" style="margin-top:4px;margin-right:-80px" >
+  <lightning-button label="Next"  icon-position="right" onclick={nextHandler}>
+  </lightning-button>
+</lightning-layout-item>
+
+<lightning-layout-item flexibility="auto"  style="margin-top:4px">
+  <lightning-button label="Last"  icon-position="right" onclick={LastHandler}>
+  </lightning-button>
+</lightning-layout-item>
+</lightning-layout> -->
+</template>

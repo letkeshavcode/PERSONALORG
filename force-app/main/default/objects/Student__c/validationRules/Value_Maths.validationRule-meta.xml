@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Value_Maths</fullName>
+    <active>true</active>
+    <errorConditionFormula>OR( Maths__c &gt;100,Maths__c &lt;0)</errorConditionFormula>
+    <errorDisplayField>Maths__c</errorDisplayField>
+    <errorMessage>Enter valid marks</errorMessage>
+</ValidationRule>

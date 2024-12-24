@@ -1,0 +1,30 @@
+.container{
+    max-height: 100%;
+    max-width: 50%;
+    height: 100%;
+    border-color: black;
+    margin-left:25%;
+}
+.column{
+    max-height: 60%;
+    height: 33%;
+
+}
+.sq{
+    background-color: aliceblue;
+    border-color: black;
+    transition: transform 0.2s;
+}
+.user1{
+    background-color: royalblue;
+    
+}
+
+.user2{
+    background-color:crimson;
+}
+
+.sq:hover{
+    transform: scale(1.1);
+    
+}

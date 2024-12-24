@@ -1,0 +1,9 @@
+<apex:page controller="PDFcontroller" renderAs="pdf">
+    <apex:form >
+        <apex:dataTable value="{!oppListItem}" var="o">
+            <apex:column value="{!o.Product2Id}" colspan="10"/><br/>
+			<apex:column value="{!o.UnitPrice}"/><br/>
+			<apex:column value="{!o.Quantity}"/>  <br/>                               
+		</apex:dataTable>
+	</apex:form>                                                                                                                        
+</apex:page>

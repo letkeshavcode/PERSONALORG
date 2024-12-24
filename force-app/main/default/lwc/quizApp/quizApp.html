@@ -1,0 +1,55 @@
+<template>
+    <lightning-card title="Quiz App In LWC">
+        <div class="slds-m-around_medium"></div>
+            <!-- <h1>Quiz app will come here</h1> -->
+            <template if:false={isSubmitted}>
+               <lightning-card class="slds-m-around_x-small bgdesign" >
+                <div>You have answered {correctAnswers} correctly.</div>
+               </lightning-card> 
+            </template>
+            <form action="">
+            <template for:each={questions} for:item="quiz">
+               <div key={quiz.id}>
+                   <div><strong>
+                       {quiz.id} - {quiz.question}
+                   </strong></div>
+                   <div class="slds-grid slds-gutters slds-m-bottom_medium slds-m-top_small">
+                   
+                    <div class="slds-col">
+                        <input type="radio" name={quiz.id} value="a" onchange={changeHandler}>
+                      {quiz.options.a}
+                    </div>
+                    <div class="slds-col">
+                        <input type="radio" name={quiz.id} value="b" onchange={changeHandler}>
+                       {quiz.options.b}
+                    </div>
+                    <div class="slds-col">
+                        <input type="radio" name={quiz.id} value="c" onchange={changeHandler}>
+                        {quiz.options.c}
+                     </div>
+                   
+                  </div>
+
+               </div>
+
+            </template>
+        </form>
+        <lightning-button 
+        variant="brand"
+        type="submit"
+        label="Submit"
+        title="Submit Quiz"
+        class="slds-m-around_small"
+        disabled={allNotSelected}
+        onclick={submitHandler}>
+    </lightning-button>
+    <lightning-button 
+        variant="brand"
+        type="reset"
+        label="Reset"
+        title="Reset Quiz"
+        class="slds-m-around_small"
+        onclick={resetHandler}>
+    </lightning-button>
+    </lightning-card>
+</template>

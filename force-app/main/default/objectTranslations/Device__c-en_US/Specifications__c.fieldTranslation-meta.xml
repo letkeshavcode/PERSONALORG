@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Specifications --></label>
+    <name>Specifications__c</name>
+    <picklistValues>
+        <masterLabel>14&quot; display</masterLabel>
+        <translation><!-- 14&quot; display --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>15&quot; display</masterLabel>
+        <translation><!-- 15&quot; display --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>180 degree</masterLabel>
+        <translation><!-- 180 degree --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Backlit</masterLabel>
+        <translation><!-- Backlit --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Fingerprint</masterLabel>
+        <translation><!-- Fingerprint --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>HDD</masterLabel>
+        <translation><!-- HDD --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SSD</masterLabel>
+        <translation><!-- SSD --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Touch</masterLabel>
+        <translation><!-- Touch --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

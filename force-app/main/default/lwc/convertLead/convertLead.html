@@ -1,0 +1,200 @@
+<template>
+<template if:true={showModalCL}>
+<section role="dialog" tabindex="-1" class="slds-modal slds-fade-in-open slds-modal_large" aria-labelledby="modal-heading-01" aria-modal="true">
+<div class="slds-modal__container">
+
+<button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse" title="Close" onclick={off}>
+<lightning-icon icon-name="utility:close"
+alternative-text="close"
+variant="inverse"
+size="small" ></lightning-icon>
+<span class="slds-assistive-text">Close</span>
+</button>
+
+<div class="slds-modal__header">
+<h1 id="modal-heading-01" class="slds-modal__title slds-hyphenate">Convert Lead</h1>
+</div>
+<div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+<section>
+
+
+<div class="accountdropdown  slds-box_border ">
+
+<lightning-accordion class="example-accordion"
+onsectiontoggle={handleToggleSection}
+allow-multiple-sections-open>
+ 
+    <lightning-accordion-section name="A" label="Account">
+    <div class="slds-grid">
+        <div class="slds-size_1-of-4 col1"></div>
+        <div class="slds-size_1-of-4 col2">
+            <input type="radio" name="AccountBG" id="AccountBG1" value={item} style="margin-right: 5px;">
+            <b>Create New</b>
+            <lightning-record-edit-form object-api-name="Account"  >
+            
+            <lightning-input-field field-name={nameField} id="accountnamefield">
+                
+            </lightning-input-field>
+            
+            </lightning-record-edit-form>
+            </div>
+            <div class="slds-size_1-of-4 col3">
+            <span>- OR -</span>
+            </div>
+            <div class="slds-size_1-of-4 col4">
+            <input type="radio" name="AccountBG" id="AccountBG2" value={item} style="margin-right: 5px;">
+            <b>Choose Existing</b>
+            <br>
+            <div class="search">
+                <div class="slds-form-element">
+                    <label class="slds-form-element__label" for="text-input-id-47">Account Search</label>
+                    <div class="slds-form-element__control slds-input-has-icon slds-input-has-icon_right">
+                        <svg class="slds-icon slds-input__icon slds-input__icon_right slds-icon-text-default" aria-hidden="true">
+                        <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#search"></use>
+                        </svg>
+                        <input type="text" id="text-input-id-47" placeholder="Search for matching accounts" class="slds-input" />
+                    </div>
+                    </div>
+            </div>
+            </div>
+    </div>
+   
+
+    </lightning-accordion-section>
+ 
+
+</lightning-accordion> 
+
+</div>
+
+<div class="contactdropdown   slds-box_border">
+
+
+    <lightning-accordion class="example-accordion"
+    onsectiontoggle={handleToggleSection}
+    allow-multiple-sections-open>
+<lightning-accordion-section name="A" label="Contact">
+<div class="slds-grid">
+    <div class="slds-size_1-of-4 col1">
+
+    </div>
+    <div class="slds-size_1-of-4 col2">
+        <input type="radio" name="ContactBG" value={item} style="margin-right: 5px;">
+        <b>Create New</b>
+        <lightning-record-edit-form object-api-name="Contact" >
+            
+        <lightning-input-field field-name={salutation} ></lightning-input-field>
+        <lightning-input-field field-name={fname} ></lightning-input-field>
+        <lightning-input-field field-name={lname} ></lightning-input-field>
+            
+        </lightning-record-edit-form>
+    </div>
+    <div class="slds-size_1-of-4 col3">
+        <span>- OR -</span>
+    </div>
+    <div class="slds-size_1-of-4 col4">
+        <input type="radio" name="ContactBG" value={item} style="margin-right: 5px;">
+        <b>Choose Existing</b>
+        <br>
+        <div class="search">
+            <div class="slds-form-element">
+                <label class="slds-form-element__label" for="text-input-id-47">Contact Search</label>
+                <div class="slds-form-element__control slds-input-has-icon slds-input-has-icon_right">
+                    <svg class="slds-icon slds-input__icon slds-input__icon_right slds-icon-text-default" aria-hidden="true">
+                    <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#search"></use>
+                    </svg>
+                    <input type="text" id="text-input-id-48" placeholder="Search for matching contacts" class="slds-input" />
+                </div>
+                </div>
+        </div>
+    </div>
+</div>
+</lightning-accordion-section>
+</lightning-accordion> 
+
+
+
+</div>
+
+<div class="opportunitydropodown slds-box_border">
+
+ 
+        <lightning-accordion class="example-accordion"
+    onsectiontoggle={handleToggleSection}
+    allow-multiple-sections-open>
+<lightning-accordion-section name="A" label="Opportunity">
+    <div class="slds-grid">
+        <div class="slds-size_1-of-4 col1">
+
+        </div>
+        <div class="slds-size_1-of-4 col2">
+            <input type="radio" name="OpportunityBG" value={item} style="margin-right: 5px;">
+            <b>Create New</b>
+            <lightning-record-edit-form object-api-name="Opportunity">
+                
+            <lightning-input-field field-name={oppname} ></lightning-input-field>
+            <lightning-input-field field-name={oppcloseddate}></lightning-input-field>
+            <lightning-input-field field-name={oppstage}  ></lightning-input-field>
+                
+            </lightning-record-edit-form>
+        </div>
+        <div class="slds-size_1-of-4 col3">
+            <span>- OR -</span>
+        </div>
+        <div class="slds-size_1-of-4 col4">
+            <input type="radio" name="OpportunityBG" value={item} style="margin-right: 5px;">
+            <b>Choose Existing</b>
+            <br>
+            <div class="search">
+                <div class="slds-form-element">
+                    <label class="slds-form-element__label" for="text-input-id-47">Opportunity Search</label>
+                    <div class="slds-form-element__control slds-input-has-icon slds-input-has-icon_right">
+                        <svg class="slds-icon slds-input__icon slds-input__icon_right slds-icon-text-default" aria-hidden="true">
+                        <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#search"></use>
+                        </svg>
+                        <input type="text" id="text-input-id-60" placeholder="Search for matching opportunities" class="slds-input" />
+                    </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+</lightning-accordion-section>
+</lightning-accordion>
+ 
+
+
+</div>
+
+<div class="ownerandstatus slds-grid">
+<span class="slds-size_1-of-2" >
+    <lightning-record-edit-form object-api-name="Lead" record-id={recordId}> 
+        <lightning-input-field field-name={account_record_owner}></lightning-input-field>
+    </lightning-record-edit-form>
+</span>
+ <span>
+     
+ </span>
+<span class="slds-size_1-of-2"> 
+<lightning-record-edit-form object-api-name="Lead" record-id={recordId}>
+    <lightning-input-field field-name={leadstatus}></lightning-input-field>
+</lightning-record-edit-form>
+</span>
+
+</div>
+
+
+</section>
+</div>
+<div class="slds-modal__footer">
+<button class="slds-button slds-button_neutral" aria-label="Cancel and close" onclick={handleCancel}>Cancel</button>
+<button class="slds-button slds-button_brand" onclick={handleConvert}>Convert</button>
+</div>
+</div>
+</section>
+<!-- <div class="slds-backdrop slds-backdrop_open" role="presentation"></div> -->
+
+
+
+</template>
+
+</template>

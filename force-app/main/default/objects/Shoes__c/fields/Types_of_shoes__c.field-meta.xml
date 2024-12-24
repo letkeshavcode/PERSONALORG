@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Types_of_shoes__c</fullName>
+    <label>Types of shoes</label>
+    <required>true</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Running</fullName>
+                <default>false</default>
+                <label>Running</label>
+            </value>
+            <value>
+                <fullName>casual</fullName>
+                <default>false</default>
+                <label>casual</label>
+            </value>
+            <value>
+                <fullName>formal</fullName>
+                <default>false</default>
+                <label>formal</label>
+            </value>
+            <value>
+                <fullName>sports</fullName>
+                <default>false</default>
+                <label>sports</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

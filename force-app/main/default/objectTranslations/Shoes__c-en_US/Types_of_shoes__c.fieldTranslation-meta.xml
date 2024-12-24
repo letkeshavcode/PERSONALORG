@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Types of shoes --></label>
+    <name>Types_of_shoes__c</name>
+    <picklistValues>
+        <masterLabel>Running</masterLabel>
+        <translation><!-- Running --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>casual</masterLabel>
+        <translation><!-- casual --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>formal</masterLabel>
+        <translation><!-- formal --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>sports</masterLabel>
+        <translation><!-- sports --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

@@ -1,0 +1,91 @@
+.col1{
+    width: 20%;
+     
+}
+.col2{
+    width: 25%;
+    margin-top: 1.2%;
+}
+.col3{
+    margin:1% 1.2% 0% 1.2%;
+    width: 6%;
+    text-align: center;
+
+}
+.col4{
+    width: 42%;
+    margin-top: 1.2%;
+}
+ 
+.uiModal--medium .modal-container{
+    width: 100% !important;
+    max-width: 80% !important;
+    padding: 0 !important;
+    min-width: 640px !important;
+      
+}
+
+/* .slds-p-around_medium{
+    padding: 0%;
+} */
+
+ .slds-modal__container{
+    width: 100% !important; 
+    max-width: 1024px !important;
+    min-width: 640px !important;
+    padding: 0 !important;
+}
+
+
+ /* :host {
+    --lwc-spacingMedium: 0px !important;
+ 
+}  */
+
+
+ .accountcard{
+     background-color:rgb(243,243,243);
+     padding-bottom: 10px;
+ }
+ .contactcard{
+    background-color:rgb(243,243,243);
+    margin-top: 3px;
+    padding-bottom: 10px;
+    
+ }
+ .opportunitycard{
+    background-color:rgb(243,243,243);
+    margin-top: 3px;
+    padding-bottom: 10px;
+ }
+.footer{
+    width: 840px;
+    max-width: 840px;
+    background-color: rgb(243,243,243);
+}
+
+ .hidden{
+     display: none;
+ }
+
+ .collapse{
+     max-height: 100px;
+     overflow-y: hidden;
+     transition: max-height 1s ease-in-out;
+ }
+.expand{
+    max-height:600px;
+    transition: max-height 1s ease-in-out;
+}
+
+.transparentButton{
+    background-color: white;
+    border: none;
+    height: 50%;
+    width: 100%;
+    overflow: hidden;
+    text-align: left;
+    color:#fcfcf5ce;
+    background-repeat: no-repeat;
+    margin-top: 5%;
+}

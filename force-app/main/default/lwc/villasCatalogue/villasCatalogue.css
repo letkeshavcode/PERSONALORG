@@ -1,0 +1,17 @@
+.slides{
+    height: fit-content;
+}
+
+.buildingpic{
+    height: 65%;
+    width: 80%;
+    margin: 5%;
+}
+
+.text{
+    text-align: center;
+}
+.slide{
+    padding: 3%;
+    margin: 2%;
+}

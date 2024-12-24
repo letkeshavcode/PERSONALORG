@@ -1,0 +1,12 @@
+<template>
+    <div>{Name}</div>
+    <div>{fn}</div>
+    <div>{ln}</div>
+    <form action="test1.js"></form>
+    <label for="fname">First name:</label>
+  <input type="text" id="fname" name="fname" onchange={handleFirstNameChange}><br><br>
+  <label for="lname">Last name:</label>
+  <input type="text" id="lname" name="lname" onchange={handleLastNameChange}><br><br>
+  <input type="submit" value="Submit" onsubmit={submitfn}>
+    <!-- <button onclick={myfunction}>Click Me</button> -->
+</template>

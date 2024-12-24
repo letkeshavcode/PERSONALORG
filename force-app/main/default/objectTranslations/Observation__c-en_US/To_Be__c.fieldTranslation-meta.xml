@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- To Be assigned Department --></label>
+    <name>To_Be__c</name>
+    <picklistValues>
+        <masterLabel>COMMBLDG_CL</masterLabel>
+        <translation><!-- COMMBLDG_CL --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

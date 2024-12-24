@@ -1,0 +1,36 @@
+<template>
+    <div class="slds-card border-mod">
+        <template for:each={recordObj} for:item="r" for:index="index">
+           <div class="slds-card__body" key={r.objId} id={r.key}>
+                <div class="slds-grid">
+                    <div class="slds-col slds-grid slds-small-size_11-of-12 
+                    slds-medium-size_11-of-12 slds-large-size_11-of-12" >
+                    <div class="slds-col margin-horizontal">
+                        <lightning-input type="text" placeholder="Name" 
+                            name="Name" data-index={index}  value={r.name} 
+                            label="Name" onchange={handleChange} >
+                        </lightning-input>
+                    </div>
+                   
+                    <div class="slds-col margin-horizontal">
+                        <lightning-input type="Date" placeholder="Date" 
+                            name="Date" data-index={index}  value={r.Date} 
+                            label="Date" onchange={handleChange} >
+                        </lightning-input>
+                    </div>
+                    <div class="slds-col margin-horizontal">
+                        <lightning-input type="text" placeholder="Status" 
+                            name="Status" data-index={index}  value={r.Status} 
+                            label="Status" onchange={handleChange} >
+                        </lightning-input>
+                    </div>
+                    </div>
+                </div>
+           </div>
+        </template>
+    </div>
+     <lightning-button label="Add" title="Add"  class="slds-m-left_x-small" onclick={handleAdd}>
+         
+     </lightning-button>
+
+</template>

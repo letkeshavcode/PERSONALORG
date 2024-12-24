@@ -1,0 +1,46 @@
+<template>
+
+    <div class="slds-form-element slds-combobox">
+        <div class="slds-combobox_container slds-form-element__control">
+            <select class="combobox slds-m-left_medium slds-combobox_container"  onclick={handleChangeSelect}>
+                <template for:each={comboOptions} for:item="co">
+                    <option key={co} value={co}>{co}</option>
+                </template>
+                </select>
+        </div>
+     
+    </div>
+
+    <div>
+
+    </div>
+
+    <template if:true={fieldsVisible}>
+        <div class="slds-grid ">
+            <div class=" slds-col slds-size_1-of-2 slds-box dualListContainer1">
+
+            </div>
+            <div class=" slds-col slds-size_1-of-2 slds-box dualListContainer2">
+
+            </div>
+             
+        </div>
+         
+    </template>
+
+
+    <!-- <lightning-combobox
+    name="progress"
+    label="Status"  
+    value={value}
+    placeholder="Select Progress"
+    options={comboOptions}
+    onchange={handleChange} ></lightning-combobox> -->
+
+    
+
+
+
+
+<p>Selected value is: {value}</p>
+</template>

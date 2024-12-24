@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Student</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Students</value>
+    </caseValues>
+    <layouts>
+        <layout>Student Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>lay2</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Fields --></label>
+            <section>Fields</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- Enter valid marks --></errorMessage>
+        <name>Value_Maths</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Enter valid marks --></errorMessage>
+        <name>Value_Science</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Enter valid marks --></errorMessage>
+        <name>Value_Sst</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Enter valid marks --></errorMessage>
+        <name>value</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Enter valid marks --></errorMessage>
+        <name>value_Hindi</name>
+    </validationRules>
+</CustomObjectTranslation>

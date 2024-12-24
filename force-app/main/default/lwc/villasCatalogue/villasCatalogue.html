@@ -1,0 +1,357 @@
+<template>
+    
+
+<template if:true={mainPage}>
+<div class="slds-size_4-of-4 slides">
+    <div class="slds-box slds-box_x-small slds-text-align_center slds-m-around_x-small">
+        <lightning-carousel>
+            <lightning-carousel-image
+                src = {image1}>
+            </lightning-carousel-image>
+            <lightning-carousel-image
+                src = {image2}>
+            </lightning-carousel-image>
+            <lightning-carousel-image
+                src ={image3}>
+            </lightning-carousel-image>
+        </lightning-carousel>
+    </div>
+</div>
+
+<div class="catalogue slds-box">
+    <div class="slds-grid slds-gutters">
+        <div class="slds-col slds-size_1-of-3">
+            <a onclick={handlelink}>
+            <span>         
+            <img name="pic7" src={bimage9} alt="" class="buildingpic">
+        </span>
+    
+        <p class="text">Park Field</p>
+    </a>
+        </div>
+        <div class="slds-col slds-size_1-of-3">
+            <a onclick={handlelink}>
+            <span><img name="pic8" src={bimage8} alt="" class="buildingpic"></span>
+            <p class="text">Prime Plaza</p>
+        </a>
+        </div>
+        <div class="slds-col slds-size_1-of-3">
+            <a onclick={handlelink}>
+            <span><img name="pic9" src={bimage1} alt="" class="buildingpic"></span>
+            <p class="text">Emaar Greens</p></a>
+        </div>
+        </div>
+</div>
+    <div class="catalogue slds-box">
+        <div class="slds-grid slds-gutters">
+            <div class="slds-col slds-size_1-of-3">
+                <a onclick={handlelink}>
+                <span>         
+                <img name="pic7" src={bimage7} alt="" class="buildingpic">
+            </span>
+        
+            <p class="text">HillTop View </p>
+        </a>
+            </div>
+            <div class="slds-col slds-size_1-of-3">
+                <a onclick={handlelink}>
+                <span><img name="pic8" src={bimage6} alt="" class="buildingpic"></span>
+                <p class="text">King's Landing</p>
+            </a>
+            </div>
+            <div class="slds-col slds-size_1-of-3">
+                <a onclick={handlelink}>
+                <span><img name="pic9" src={bimage5} alt="" class="buildingpic"></span>
+                <p class="text">Park Prime Plaza</p></a>
+            </div>
+            </div>
+    </div>
+    <div class="catalogue slds-box">
+        <div class="slds-grid slds-gutters">
+            <div class="slds-col slds-size_1-of-3">
+                <a onclick={handlelink}>
+                <span>         
+                <img name="pic7" src={bimage4} alt="" class="buildingpic">
+            </span>
+        
+            <p class="text">La Pallacia</p>
+        </a>
+            </div>
+            <div class="slds-col slds-size_1-of-3">
+                <a onclick={handlelink}>
+                <span><img name="pic8" src={bimage3} alt="" class="buildingpic"></span>
+                <p class="text">Emaar Bela Casa</p>
+            </a>
+            </div>
+            <div class="slds-col slds-size_1-of-3">
+                <a onclick={handlelink}>
+                <span><img name="pic9" src={bimage6} alt="" class="buildingpic"></span>
+                <p class="text">Burj AL Arab</p></a>
+            </div>
+            </div>
+    </div>
+    
+</template>
+
+<template if:true={p1}>
+    <div class="slds-size_4-of-4">
+        <div class="slds-box slds-box_x-small slds-text-align_center slds-m-around_x-small">Basic Carousel
+            <lightning-carousel>
+                <lightning-carousel-image
+                    src ={int1}
+                    header = "Bedroom"
+                    description = "First card description."
+                    alternative-text = "First card accessible description."
+                    href = "javascript:void(0);">
+                </lightning-carousel-image>
+                <lightning-carousel-image
+                    src ={int4}
+                    header = "Hallway"
+                    description = "Second card description."
+                    alternative-text = "Second card accessible description."
+                    href = "javascript:void(0);">
+                </lightning-carousel-image>
+                <lightning-carousel-image
+                    src ={int7}
+                    header = "bathroom"
+                    description = "Third card description."
+                    alternative-text = "Third card accessible description."
+                    href = "javascript:void(0);">
+                </lightning-carousel-image>
+            </lightning-carousel>
+        </div>
+    </div>
+</template>
+<template if:true={p2}>
+    <div class="slds-size_4-of-4">
+        <div class="slds-box slds-box_x-small slds-text-align_center slds-m-around_x-small">Basic Carousel
+            <lightning-carousel>
+                <lightning-carousel-image
+                    src ={int1}
+                    header = "Bedroom"
+                    description = "First card description."
+                    alternative-text = "First card accessible description."
+                    href = "javascript:void(0);">
+                </lightning-carousel-image>
+                <lightning-carousel-image
+                    src ={int4}
+                    header = "Hallway"
+                    description = "Second card description."
+                    alternative-text = "Second card accessible description."
+                    href = "javascript:void(0);">
+                </lightning-carousel-image>
+                <lightning-carousel-image
+                    src ={int7}
+                    header = "bathroom"
+                    description = "Third card description."
+                    alternative-text = "Third card accessible description."
+                    href = "javascript:void(0);">
+                </lightning-carousel-image>
+            </lightning-carousel>
+        </div>
+    </div>
+</template>
+<template if:true={p3}>
+    <div class="slds-size_4-of-4">
+        <div class="slds-box slds-box_x-small slds-text-align_center slds-m-around_x-small">Basic Carousel
+            <lightning-carousel>
+                <lightning-carousel-image
+                    src ={int1}
+                    header = "Bedroom"
+                    description = "First card description."
+                    alternative-text = "First card accessible description."
+                    href = "javascript:void(0);">
+                </lightning-carousel-image>
+                <lightning-carousel-image
+                    src ={int4}
+                    header = "Hallway"
+                    description = "Second card description."
+                    alternative-text = "Second card accessible description."
+                    href = "javascript:void(0);">
+                </lightning-carousel-image>
+                <lightning-carousel-image
+                    src ={int7}
+                    header = "bathroom"
+                    description = "Third card description."
+                    alternative-text = "Third card accessible description."
+                    href = "javascript:void(0);">
+                </lightning-carousel-image>
+            </lightning-carousel>
+        </div>
+    </div>
+</template>
+<template if:true={p4}>
+    <div class="slds-size_4-of-4">
+        <div class="slds-box slds-box_x-small slds-text-align_center slds-m-around_x-small">Basic Carousel
+            <lightning-carousel>
+                <lightning-carousel-image
+                    src ={int1}
+                    header = "Bedroom"
+                    description = "First card description."
+                    alternative-text = "First card accessible description."
+                    href = "javascript:void(0);">
+                </lightning-carousel-image>
+                <lightning-carousel-image
+                    src ={int4}
+                    header = "Hallway"
+                    description = "Second card description."
+                    alternative-text = "Second card accessible description."
+                    href = "javascript:void(0);">
+                </lightning-carousel-image>
+                <lightning-carousel-image
+                    src ={int7}
+                    header = "bathroom"
+                    description = "Third card description."
+                    alternative-text = "Third card accessible description."
+                    href = "javascript:void(0);">
+                </lightning-carousel-image>
+            </lightning-carousel>
+        </div>
+    </div>
+</template>
+<template if:true={p5}>
+    <div class="slds-size_4-of-4">
+        <div class="slds-box slds-box_x-small slds-text-align_center slds-m-around_x-small">Basic Carousel
+            <lightning-carousel>
+                <lightning-carousel-image
+                    src ={int1}
+                    header = "Bedroom"
+                    description = "First card description."
+                    alternative-text = "First card accessible description."
+                    href = "javascript:void(0);">
+                </lightning-carousel-image>
+                <lightning-carousel-image
+                    src ={int4}
+                    header = "Hallway"
+                    description = "Second card description."
+                    alternative-text = "Second card accessible description."
+                    href = "javascript:void(0);">
+                </lightning-carousel-image>
+                <lightning-carousel-image
+                    src ={int7}
+                    header = "bathroom"
+                    description = "Third card description."
+                    alternative-text = "Third card accessible description."
+                    href = "javascript:void(0);">
+                </lightning-carousel-image>
+            </lightning-carousel>
+        </div>
+    </div>
+</template>
+<template if:true={p6}>
+    <div class="slds-size_4-of-4">
+        <div class="slds-box slds-box_x-small slds-text-align_center slds-m-around_x-small">Basic Carousel
+            <lightning-carousel>
+                <lightning-carousel-image
+                    src ={int1}
+                    header = "Bedroom"
+                    description = "First card description."
+                    alternative-text = "First card accessible description."
+                    href = "javascript:void(0);">
+                </lightning-carousel-image>
+                <lightning-carousel-image
+                    src ={int4}
+                    header = "Hallway"
+                    description = "Second card description."
+                    alternative-text = "Second card accessible description."
+                    href = "javascript:void(0);">
+                </lightning-carousel-image>
+                <lightning-carousel-image
+                    src ={int7}
+                    header = "bathroom"
+                    description = "Third card description."
+                    alternative-text = "Third card accessible description."
+                    href = "javascript:void(0);">
+                </lightning-carousel-image>
+            </lightning-carousel>
+        </div>
+    </div>
+</template>
+<template if:true={p7}>
+    <div class="slds-size_4-of-4">
+        <div class="slds-box slds-box_x-small slds-text-align_center slds-m-around_x-small">Basic Carousel
+            <lightning-carousel>
+                <lightning-carousel-image
+                    src ={int1}
+                    header = "Bedrooom"
+                    description = "First card description."
+                    alternative-text = "First card accessible description."
+                    href = "javascript:void(0);">
+                </lightning-carousel-image>
+                <lightning-carousel-image
+                    src ={int4}
+                    header = "Hallway"
+                    description = "Second card description."
+                    alternative-text = "Second card accessible description."
+                    href = "javascript:void(0);">
+                </lightning-carousel-image>
+                <lightning-carousel-image
+                    src ={int7}
+                    header = "bathroom"
+                    description = "Third card description."
+                    alternative-text = "Third card accessible description."
+                    href = "javascript:void(0);">
+                </lightning-carousel-image>
+            </lightning-carousel>
+        </div>
+    </div>
+</template>
+<template if:true={p8}>
+    <div class="slds-size_4-of-4">
+        <div class="slds-box slds-box_x-small slds-text-align_center slds-m-around_x-small">Basic Carousel
+            <lightning-carousel>
+                <lightning-carousel-image
+                    src ={int1}
+                    header = "Bedroom"
+                    description = "First card description."
+                    alternative-text = "First card accessible description."
+                    href = "javascript:void(0);">
+                </lightning-carousel-image>
+                <lightning-carousel-image
+                    src ={int4}
+                    header = "Hallway"
+                    description = "Second card description."
+                    alternative-text = "Second card accessible description."
+                    href = "javascript:void(0);">
+                </lightning-carousel-image>
+                <lightning-carousel-image
+                    src ={int7}
+                    header = "bathroom"
+                    description = "Third card description."
+                    alternative-text = "Third card accessible description."
+                    href = "javascript:void(0);">
+                </lightning-carousel-image>
+            </lightning-carousel>
+        </div>
+    </div>
+</template>
+<template if:true={p9}>
+    <div class="slds-size_4-of-4">
+        <div class="slds-box slds-box_x-small slds-text-align_center slds-m-around_x-small">Basic Carousel
+            <lightning-carousel>
+                <lightning-carousel-image
+                    src ={int1}
+                    header = "Bedroom"
+                    description = "First card description."
+                    alternative-text = "First card accessible description."
+                    href = "javascript:void(0);">
+                </lightning-carousel-image>
+                <lightning-carousel-image
+                    src ={int4}
+                    header = "Hallway"
+                    description = "Second card description."
+                    alternative-text = "Second card accessible description."
+                    href = "javascript:void(0);">
+                </lightning-carousel-image>
+                <lightning-carousel-image
+                    src ={int7}
+                    header = "bathroom"
+                    description = "Third card description."
+                    alternative-text = "Third card accessible description."
+                    href = "javascript:void(0);">
+                </lightning-carousel-image>
+            </lightning-carousel>
+        </div>
+    </div>
+</template>
+</template>

@@ -1,0 +1,103 @@
+<template>
+        <div class="container">
+           <div class="header">
+            <Header class="slds-modal__header">
+                <div class="slds-col_bump-left  slds-p-horizontal_x-large slds-text-align_center">
+                   <label> Convert Lead</label>                            
+                </div>
+            </Header>
+           </div> 
+           <div class="body slds-box_border">
+            
+                 
+                <div class="accountcard  slds-box_border">
+                
+            
+                <div class="slds-grid">
+                    <div class="slds-size_1-of-4 col1">
+                        Account Dropdown
+                    </div>
+                    <div class="slds-size_1-of-4 col2">
+                        <input type="radio" name="AccountBG" value={item} style="margin-right: 5px;">
+                        <b>Create New</b>
+                        <lightning-input required="true" type="text" label="Account Name" value={newRecord.AccountName} onchange={nameInpChange}></lightning-input>
+                    </div>
+                    <div class="slds-size_1-of-4 col3">
+                        <span>- OR -</span>
+                        </div>
+                        <div class="slds-size_1-of-4 col4">
+                        <input type="radio" name="AccountBG" id="AccountBG2" value={item} style="margin-right: 5px;">
+                        <b>Choose Existing</b>
+                        <br>
+                        <div class="search">
+                            <div class="slds-form-element">
+                                <label class="slds-form-element__label" for="text-input-id-47">Account Search</label>
+                                <div class="slds-form-element__control slds-input-has-icon slds-input-has-icon_right">
+                                    <svg class="slds-icon slds-input__icon slds-input__icon_right slds-icon-text-default" aria-hidden="true">
+                                    <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#search"></use>
+                                    </svg>
+                                    <input type="text" id="text-input-id-47" placeholder="Search for matching accounts" class="slds-input" />
+                                </div>
+                                </div>
+                        </div>
+                        </div>
+                </div>
+                <div class="slds-grid">
+                    <div class="slds-size_1-of-4 col1">a</div>
+                    <div class="slds-size_1-of-4 col2">b</div>
+                    <div class="slds-size_1-of-4 col3">c</div>
+                    <div class="slds-size_1-of-4 col4">d</div>
+                </div>
+                
+            </div>
+            
+            
+            <div class="contactcard slds-grid slds-box_border">
+                <div class="slds-size_1-of-4 col1">Contact Dropdown</div>
+                <div class="slds-size_1-of-4 col2">
+                    <input type="radio" name="ContactBG" value={item} style="margin-right: 5px;">
+                    <b>Create New</b>
+                    <!-- <lightning-input required="true" type="text" label="Salutation" value={newRecord.ContactSalutation} onchange={SalutationInpChange}></lightning-input> -->
+                    <lightning-combobox
+            name="Salutation"
+            label="Salutation"
+            value={newRecord.ContactSalutation}
+            options={options}
+            onchange={SalutationInpChange}
+            ></lightning-combobox>
+                    <lightning-input type="text" label="First Name" value={newRecord.ContactFirstName} onchange={FirstNameInpChange}></lightning-input>
+                    <lightning-input required="true" type="text" label="Last Name" value={newRecord.ContactLastName} onchange={LastNameInpChange}></lightning-input>
+                </div>
+                <div class="slds-size_1-of-4 col3"></div>
+                <div class="slds-size_1-of-4 col4"></div>
+            </div>
+            
+            <div class="opportunitycard slds-grid slds-box_border">
+                <div class="slds-size_1-of-4 col1">Opportunity Dropdown</div>
+                <div class="slds-size_1-of-4 col2">
+                    <input type="radio" name="OpportunityBG" value={item} style="margin-right: 5px;">
+                    <b>Create New</b>
+                    <lightning-input required="true" type="text" label="Opportunity Name " value={newRecord.OpportunityName} onchange={OpportunityNameInpChange}></lightning-input>
+                    
+                </div>
+                <div class="slds-size_1-of-4 col3"></div>
+                <div class="slds-size_1-of-4 col4"></div>
+            </div>
+            
+            
+           </div>
+           <div class="footer">
+            <footer class="slds-modal__footer">
+                <div class="slds-col_bump-left slds-text-align_right slds-p-horizontal_x-small slds-text-align_center">
+                    <!--  <lightning-button variant="brand" label="Next" title="Next" type="submit" onclick={handleClickRoute}
+                        disabled={disableNextButton} class="slds-m-left_x-small slds-p-right_xx-small">
+                    </lightning-button> -->
+                    <lightning-button variant="brand" label="Save" title="Save" class="slds-m-left_x-small slds-p-right_xx-small" onclick={handleForSave}>
+                    </lightning-button>               
+                </div>
+                </footer>
+           </div>
+            
+        </div>
+        
+    </template>

@@ -1,0 +1,86 @@
+.banner{
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    font-size: 1.2rem;
+}
+.contact-info{
+    background-color: orangered;
+    display: flex;
+    width: 45%;
+    padding: 1rem 0rem;
+}
+.banner-btns{
+    background-color: black;
+    word-wrap: break-word;
+    display: flex;
+    
+    width: 55%;
+  
+}
+
+.icon{
+    --sds-c-icon-color-foreground-default: white;
+    --sds-c-icon-color-background: orangered;
+}
+div.contact-info span{
+    margin: 0rem 0.5rem;
+}
+div.banner-btns div{
+    padding: 1rem 0rem;
+    margin: 0rem 2.5rem;
+}
+/* div.banner-btns div:hover{
+    
+    border:  0 0 2px 0 solid orangered ;
+} */
+/* .cool-link {
+    display: inline-block;
+    color:white;
+    text-decoration: none;
+} */
+
+/* .cool-link::after {
+ 
+} */
+
+/* .cool-link:hover{
+   
+    border-bottom: 2px solid orangered;
+    transition: width 2s;
+    animation-fill-mode: both;
+} */
+/* .div.banner-btns div:hover::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    bottom: 0;
+    left: 0;
+    background-color: white;
+    transform: scaleX(0);
+    transform-origin: center bottom;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .div.banner-btns div::after {
+    transform: scaleX(1);
+  } */
+
+.partner-form{
+    padding: 1rem;
+}
+
+.form-section{
+    padding: 1rem;
+}
+  .form-section{
+    background-color:rgb(242,242,244);
+  }
+
+.text-section{
+    padding: 1rem;
+}
+
+
+/* transition: width .3s; */

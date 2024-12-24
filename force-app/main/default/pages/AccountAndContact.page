@@ -1,0 +1,17 @@
+<apex:page controller="AccountNContactController" >
+    
+    <apex:pageBlock title="My Accounts & Contacts">
+        <apex:repeat value="{!acct}" var="a">
+            <apex:pageBlockSection title="{!a.Name}">
+              <!--  <apex:outputField value="{!a.Name}"/> -->
+                <apex:pageblocktable value="{!a.Contacts}" var="c">
+                    <apex:column value="{!c.Id}"/>
+                    <apex:column value="{!c.FirstName}" />
+                    <apex:column value="{!c.LastName}"/>
+                </apex:pageblocktable> 
+            </apex:pageBlockSection>
+            
+        </apex:repeat>
+        
+    </apex:pageBlock>
+</apex:page>

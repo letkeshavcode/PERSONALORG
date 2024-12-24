@@ -1,0 +1,213 @@
+<template>
+<lightning-quick-action-panel header="Convert Lead" style="padding: 0px;"> 
+<!-- <div class="" > -->
+    <!-- <div class="header">
+        <Header class="slds-modal__header slds-text-heading--medium">
+            <div class="slds-col_bump-left  slds-p-horizontal_x-large slds-text-align_center">
+                <label class="slds-text-heading--medium"> Convert Lead</label>                            
+            </div>
+        </Header>
+        </div>  -->
+
+<!-- <div class="content"> -->
+            
+<div class="accountcard  slds-box_border" data-id="expandedPanel">
+    
+    <div class="slds-grid">
+        <div class="slds-size_1-of-4 col1">
+            <lightning-accordion class="example-accordion"
+                onclick={accountToggle} allow-multiple-sections-open >
+            <lightning-accordion-section data-id="acntaccordian"  class="slds-is-open"   visibility="hidden" name="A" label="Accounts">
+            <!-- <div class="">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Necessitatibus fuga praesentium veniam dolorem omnis, distinctio aut et laboriosam blanditiis a repellat, reiciendis illo rerum error ex enim tempore eos ipsum!
+            </div> -->
+            
+        </lightning-accordion-section>
+        </lightning-accordion>
+        </div>
+        <div class="slds-size_1-of-4 col2">
+            <input type="radio" data-id="ARBCN" onchange={accountToggleThroughRB} name="AccountBG" value={item} style="margin-right: 5px;" checked>
+            <b>Create New</b>
+            <lightning-input required="true" type="text" label="Account Name" value={nameValue} onchange={nameInpChange}></lightning-input>
+        </div>
+        <div class="slds-size_1-of-4 col3">
+            <span>- OR -</span>
+            </div>
+            <div class="slds-size_1-of-4 col4">
+            <input type="radio" data-id="ARBCE" onchange={accountToggleThroughRB} name="AccountBG" id="AccountBG2" value={item} style="margin-right: 5px;">
+            <b>Choose Existing</b>
+            <br>
+            <div class="search">
+                <!-- <div class="slds-form-element">
+                    <label class="slds-form-element__label" for="text-input-id-47">Account Search</label>
+                    <div class="slds-form-element__control slds-input-has-icon slds-input-has-icon_right">
+                        
+                        <input type="search"  id="text-input-id-47" onchange={handleAccountSearch} placeholder="Search for matching accounts" class="slds-input" />
+                    </div>
+                    
+                    </div> -->
+                    <c-custom-lookup icon-name="standard:account"
+                    s-object-api-name="account"
+                    label="Account Search"
+                    onlookupupdate={lookupRecord}
+                    placeholder="Search for matching Accounts" data-id="CLAccount"></c-custom-lookup>
+                    <lightning-textarea name="" data-id="ta1" class="textarea1 hidden" readonly value="" label="" placeholder="0 Account Matches" ></lightning-textarea>
+            </div>
+            </div>
+    </div>
+    
+</div>
+
+<div class="contactcard slds-grid slds-box_border">
+    <div class="slds-size_1-of-4 col1">
+        <lightning-accordion class="example-accordion"
+        onclick={contactToggle} allow-multiple-sections-open>
+    <lightning-accordion-section  visibility="hidden" name="A" label="Contact">
+        <div class="hidden" >
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Necessitatibus fuga praesentium veniam dolorem omnis, distinctio aut et laboriosam blanditiis a repellat, reiciendis illo rerum error ex enim tempore eos ipsum!
+        </div>
+        
+    </lightning-accordion-section>
+    </lightning-accordion>
+    </div>
+    <div class="slds-size_1-of-4 col2">
+        <input type="radio" onchange={contactToggleThroughRB} data-id="CRBCN" name="ContactBG" value={item} style="margin-right: 5px;" checked>
+        <b>Create New</b>
+        <!-- <lightning-input required="true" type="text" label="Salutation" value={newRecord.ContactSalutation} onchange={SalutationInpChange}></lightning-input> -->
+        <lightning-combobox class="hidden" data-id="sal"
+name="Salutation"
+label="Salutation"
+value={newRecord.ContactSalutation}
+options={options}
+onchange={SalutationInpChange}
+></lightning-combobox>
+        <lightning-input type="text" label="First Name" value={fNameValue} onchange={FirstNameInpChange}></lightning-input>
+        <lightning-input required="true" type="text" label="Last Name" data-id="ln" value={lNameValue} onchange={LastNameInpChange} class="hidden"></lightning-input>
+    </div>
+    <div class="slds-size_1-of-4 col3">
+        <span>- OR -</span>
+        </div>
+        <div class="slds-size_1-of-4 col4">
+        <input type="radio" onchange={contactToggleThroughRB} data-id="CRBCE" name="ContactBG" id="ContactBG2" value={item} style="margin-right: 5px;">
+        <b>Choose Existing</b>
+        <br>
+        <div class="search">
+            <!-- <div class="slds-form-element">
+                <label class="slds-form-element__label" for="text-input-id-47">Contact Search</label>
+                <div class="slds-form-element__control slds-input-has-icon slds-input-has-icon_right">
+                    
+                    <input type="text" id="text-input-id-48" placeholder="Search for matching contacts" class="slds-input" />
+                    
+                </div>
+                </div> -->
+                <c-custom-lookup icon-name="standard:contact"
+                s-object-api-name="contact"
+                label="Contact Search"
+                onlookupupdate={lookupRecord}
+                placeholder="Search for matching Contacts" data-id="CLContact"
+                ></c-custom-lookup>
+                <lightning-textarea name="" data-id="ta2" class="textarea2 hidden" readonly value="" label="" placeholder="0 Contact Matches" ></lightning-textarea>
+        
+            </div>
+        </div>
+</div>
+
+<div class="opportunitycard slds-grid slds-box_border">
+    <div class="slds-size_1-of-4 col1">
+        <lightning-accordion data-id="oppaccordianbtn"  class="example-accordion"
+        onclick={opportunityToggle}  allow-multiple-sections-open>
+    <lightning-accordion-section data-id="OpportunityAccordianIcon" visibility="hidden" name="A" label="Opportunity">
+        <div class="hidden" >
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Necessitatibus fuga praesentium veniam dolorem omnis, distinctio aut et laboriosam blanditiis a repellat, reiciendis illo rerum error ex enim tempore eos ipsum!
+        </div>
+        
+    </lightning-accordion-section>
+    </lightning-accordion>
+</div>
+    
+    <div class="slds-size_1-of-4 col2">
+        <input type="radio" data-id="ORBCN" onchange={opportunityToggleThroughRB} name="OpportunityBG" value={item} style="margin-right: 5px;" checked>
+        <b>Create New</b>
+        <lightning-input data-id="OCNT" required="true" type="text" label="Opportunity Name " value={oppValue} onchange={OpportunityNameInpChange}></lightning-input>
+        <lightning-input label="Don't create opportunity on conversion" class="slds-p-left_xx-small" style="font-size: x-small; margin-top:2%"  type="checkbox" checked={checkboxVal}  onchange={handleChBox}>
+        </lightning-input>
+    </div>
+    
+    <div class="slds-size_1-of-4 col3">
+        <span>- OR -</span>
+        </div>
+        <div class="slds-size_1-of-4 col4">
+        <input type="radio" data-id="ORBCE" name="OpportunityBG" id="OpportunityBG2" value={item} style="margin-right: 5px;" onchange={opportunityToggleThroughRB}>
+        <b>Choose Existing</b>
+        <br>
+        <div class="search">
+            <div class="slds-form-element">
+                <label class="slds-form-element__label" for="text-input-id-47">Opportunity Search</label>
+                <div class="slds-form-element__control slds-input-has-icon slds-input-has-icon_right">
+                    
+                    <input type="text" data-id="OSB" placeholder="Search for matching opportunities" class="slds-input" />
+                    <lightning-textarea name="" data-id="ta3" class="textarea3 hidden" readonly value="" label="" placeholder="0 Opportunity Matches" ></lightning-textarea>
+                </div>
+                </div>
+        </div>
+        </div>
+</div>
+<!-- </div> -->
+<div class="convertpop">
+    <c-modal-popup></c-modal-popup>
+</div>
+<!-- <div class="leadCard slds-grid">
+    <div class="slds-size_1-of-2 col1">
+        <c-custom-lookup icon-name="standard:User"
+        s-object-api-name="User"
+        label="Record Owner"
+        onlookupupdate={lookupRecord}
+        placeholder="Search User..." ></c-custom-lookup>
+    </div>
+    <div class="slds-size_1-of-2 col2">
+        <lightning-combobox class="" data-id="lst"
+name="Leadstatus"
+label="Converted Status"
+value={leadStatus}
+options={status}
+onchange={leadstatusInputChange} required="true"
+></lightning-combobox>
+    </div>
+    
+</div>
+    -->
+
+<!-- <div class="">
+    <footer >
+        <div class="">
+                <lightning-button variant="brand" label="Next" title="Next" type="submit" onclick={handleClickRoute}
+                disabled={disableNextButton} class="slds-m-left_x-small slds-p-right_xx-small">
+            </lightning-button>
+                <lightning-button class="btn" variant="brand" label="Cancel" type="cancel" onclick={handleCancel}></lightning-button>
+            <lightning-button class="btn" variant="brand" label="Convert" title="Save"  onclick={save}>
+            </lightning-button>               
+        </div>
+        </footer> 
+    </div> -->
+<!-- </div> -->
+        <!-- <footer class="slds-modal__footer" > -->
+            <div slot="footer" class="" style="padding: 0;"> 
+                <lightning-button variant="neutral" label="Cancel" title="Cancel" onclick={handleCancel}> </lightning-button>
+                <lightning-button variant="brand" class="slds-var-m-left_small" type="submit" label="Convert" onclick={save}></lightning-button>
+            
+            
+        <!-- </footer> -->
+    
+
+</div>   
+</lightning-quick-action-panel>
+
+
+
+
+<!-- <div class="slds-backdrop slds-backdrop_open" role="presentation"></div> -->
+
+
+
+
+</template>

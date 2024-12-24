@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Value_Sst</fullName>
+    <active>true</active>
+    <errorConditionFormula>OR( SST__c &gt;100,SST__c &lt;0)</errorConditionFormula>
+    <errorDisplayField>SST__c</errorDisplayField>
+    <errorMessage>Enter valid marks</errorMessage>
+</ValidationRule>
