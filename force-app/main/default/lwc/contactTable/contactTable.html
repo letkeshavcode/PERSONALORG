@@ -1,0 +1,14 @@
+<template>
+<div>
+    <lightning-card
+    variant="narrow"
+    icon-name="standard:Contact" title="Contacts"></lightning-card>
+
+    <lightning-datatable
+        data={data}
+        columns={columns}
+        key-field="Id"
+        onrowselection={getSelectedName}
+    ></lightning-datatable>
+</div>
+</template>
